@@ -1,4 +1,5 @@
 from collections import deque
+from sys import stdin
 import sys
 
 data_input = int(sys.stdin.readline())
