@@ -1,27 +1,26 @@
 from collections import deque
-from sys import stdin
-import sys
 
-data_input = int(sys.stdin.readline())
+N, K = map(int, input().split())
 
-for _ in range(data_input):
+d = deque()
+new = []
 
-    left = []
-    right = []
-    password = input()
+for i in range(1, N+1):
+    d.append(i)
 
-    for x in password:
-        if x == ">":
-            if right:
-                  left.append(right.pop())
-        elif x == "<":
-            if left:
-                right.append(left.pop())
-        elif x == "-":
-            if left:
-                left.pop()
-        else:
-                left.extend(reversed(right))
+while len(d) != 0:
+    for i in range(K-1):
+        a = d.popleft()
+        d.append(a)
     
-    password = ''.join(left)
-    print(password)
+    a = d.popleft()
+    new.append(a)
+
+print('<', end='')
+
+for i in range(N):
+    print(int(new[i]), end='')
+    if i != N-1:
+        print(', ',end='')
+
+print('>')
