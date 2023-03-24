@@ -1,7 +1,10 @@
 from collections import deque
-data_input = int(input())
+import sys
 
-for _ in range(test_cases):
+data_input = int(sys.stdin.readline())
+
+for _ in range(data_input):
+
     left = []
     right = []
     password = input()
@@ -9,13 +12,15 @@ for _ in range(test_cases):
     for x in password:
         if x == ">":
             if right:
-                right.append(right.pop()) 
+                  left.append(right.pop())
         elif x == "<":
             if left:
-                left.append(left.pop())
+                right.append(left.pop())
         elif x == "-":
             if left:
                 left.pop()
-
-
+        else:
+                left.extend(reversed(right))
+    
+    password = ''.join(left)
     print(password)
