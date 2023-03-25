@@ -1,19 +1,21 @@
-import sys
-input = sys.stdin.readline
 from collections import deque
+data_input = int(input())
 
-N = int(input())
-a = list(map(int, input().split()))[::-1]
-floor = [i for i in range(N, 1, -1)]
-front = [1]
-q = deque()
-for command in a[1:]:
-    if command == 1:
-        q.appendleft(front.pop())
-        front.append(floor.pop())
-    elif command == 2:
-        q.appendleft(floor.pop())
-    else:
-        q.append(floor.pop())
-answer = front + list(q)
-print(*answer)
+for _ in range(data_input):
+    left = []
+    right = []
+    password = input()
+
+    for x in password:
+        if x == ">":
+            if right:
+                right.append(right.pop()) 
+        elif x == "<":
+            if left:
+                left.append(left.pop())
+        elif x == "-":
+            if left:
+                left.pop()
+
+
+    print(password)
