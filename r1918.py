@@ -5,8 +5,9 @@ input = sys.stdin.readline
 letters = input()
 stack = []
 ans = ''
+
 for i in letters:
-    if i.isalpha():
+    if i.isalpha(): #변수 i의 값이 알파벳 문자열인지 검사
         ans += i
     else:
         if i == '(': 
