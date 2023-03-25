@@ -1,26 +1,19 @@
+import sys
+input = sys.stdin.readline
 from collections import deque
 
-N, K = map(int, input().split())
-
-d = deque()
-new = []
-
-for i in range(1, N+1):
-    d.append(i)
-
-while len(d) != 0:
-    for i in range(K-1):
-        a = d.popleft()
-        d.append(a)
-    
-    a = d.popleft()
-    new.append(a)
-
-print('<', end='')
-
-for i in range(N):
-    print(int(new[i]), end='')
-    if i != N-1:
-        print(', ',end='')
-
-print('>')
+N = int(input())
+a = list(map(int, input().split()))[::-1]
+floor = [i for i in range(N, 1, -1)]
+front = [1]
+q = deque()
+for command in a[1:]:
+    if command == 1:
+        q.appendleft(front.pop())
+        front.append(floor.pop())
+    elif command == 2:
+        q.appendleft(floor.pop())
+    else:
+        q.append(floor.pop())
+answer = front + list(q)
+print(*answer)
