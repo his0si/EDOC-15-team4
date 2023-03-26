@@ -23,7 +23,7 @@ def teamfuction():
     for i in range(N): 
             for j in range(N): 
                 if exist[i] and exist[j]: 
-                    StartTeam = StartTeam + (S[i][j] + S[j][i]) ##브루트포스(?)로 풀었어요..그냥 냅따 for문 돌리면서 모든 경우 다 찾는 거..
+                    StartTeam = StartTeam + (S[i][j] + S[j][i]) #브루트포스(?)로 풀었어요..그냥 냅따 for문 돌리면서 모든 경우 다 찾는 거..
                 else: 
                     LinkTeam = LinkTeam + (S[i][j] + S[j][i]) 
         
