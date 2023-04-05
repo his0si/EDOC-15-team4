@@ -9,6 +9,6 @@ for i in range(3):
 #반복문으로 버튼 B랑 C도 동일
 
 if T != 0:
-    print("-1")  # 시간을 맞출 수 없는 경우
+    print("-1") 
 else:
     print(count[0], count[1], count[2])
