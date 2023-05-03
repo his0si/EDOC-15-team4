@@ -1,4 +1,4 @@
-#동적 계획법으로 풀기
+#동적 계획법으로 풀기 (Dynamic Programming)
 t=int(input())
 
 for i in range(t):
