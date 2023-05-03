@@ -1,10 +1,9 @@
-from sys import stdin
-import sys
+switch_num = int(input())
+switch = list(map(int, input().split()))
+student_num = int(input())
+sex, num = map(int, input().split())
 
-N, M = map(int, input().split())
-Maze = []
-for _ in range(N):
-    Maze.append(list(map(int, stdin.readline().split())))  #입력
-    
-dp = [[0 for c in range(M)] 
-for r in range(N)] # Dynamic Programming 리스트 초기화
+print(switch_num)
+print(switch)
+print(student_num)
+print(sex, num)
