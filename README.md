@@ -1,4 +1,4 @@
-# EDOC-15-team4
+## EDOC-15-team4 [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/notion.svg' alt='notion' height='20'>](https://www.notion.so/EDOC-f834b29a58c6488691a1b36021383298?pvs=4)
 
 ⦁ 2023-1 4조의 활동을 기록합니다.
 
