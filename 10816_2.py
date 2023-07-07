@@ -14,4 +14,4 @@ ans = []
 for num in Mcard:
     ans.append(card_counter[num])
 
-print(*ans)
+print(*ans) # ans 리스트의 요소들을 공백으로 구분하여 출력
